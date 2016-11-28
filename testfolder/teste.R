@@ -6,6 +6,6 @@
 #' @export
 #'
 #' @examples
-name <- function(variables) {
+testefunc <- function(variables) {
     
 }
