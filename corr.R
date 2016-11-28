@@ -41,13 +41,14 @@ corr <- function(directory, threshold = 0) {
         good_obs <- complete.cases(monitors)
         # logical vector
         
-        #pollutants <- monitors[good_obs,c('sulfate','nitrate')]
+        pollutants <- monitors[good_obs,c('sulfate','nitrate')]
         # data.frame
         
-        pollutants <- data.matrix(monitors[good_obs,c('sulfate','nitrate')],rownames.force = FALSE)
+        #pollutants <- data.matrix(monitors[good_obs,c('sulfate','nitrate')],rownames.force = FALSE)
         # data.matrix
         
         correlations <- c(correlations,cor(pollutants[,'nitrate'],pollutants[,'sulfate']))
+        #numerical vector
         
     }
     correlations
